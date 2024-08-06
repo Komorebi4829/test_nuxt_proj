@@ -1,0 +1,14 @@
+kind: pipeline
+type: exec
+name: nuxt3
+
+trigger:
+    branch:
+        - main
+
+steps:
+    - name: build
+      commands:
+          - node -v
+          - echo ${PWD}
+          - echo ${DRONE_WORKSPACE}

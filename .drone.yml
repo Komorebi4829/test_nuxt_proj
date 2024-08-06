@@ -4,11 +4,21 @@ name: nuxt3
 
 trigger:
     branch:
-        - master
+        - main
 
 steps:
+    - name: step1
+      commands:
+          - echo "running"
+
+    - name: step2
+      commands:
+          - echo "running2"
+
     - name: build
       commands:
           - node -v
           - echo ${PWD}
           - echo ${DRONE_WORKSPACE}
+
+      

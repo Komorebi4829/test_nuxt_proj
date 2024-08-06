@@ -4,7 +4,7 @@ name: nuxt3
 
 trigger:
     branch:
-        - main
+        - master
 
 steps:
     - name: build

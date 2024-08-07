@@ -1,14 +1,17 @@
 kind: pipeline
-type: docker
+type: exec
 name: default
 
 trigger:
     branch:
         - master
 
+platform:
+  os: linux
+  arch: arm64
+
 steps:
     - name: greeting
-      image: hello-world
       commands:
           - echo "running"
           - echo ${PWD}

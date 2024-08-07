@@ -18,10 +18,11 @@ steps:
           - echo ${DRONE_WORKSPACE}
           - pwd
           - ls -al
-          - cd test_nuxt_proj
-          - ls -al
 
     - name: step2
       commands:
-          - echo "running2"
-    
+          - ls -al
+
+    - name: step3
+      commands:
+          - ls -al

@@ -7,18 +7,14 @@ trigger:
         - master
 
 steps:
-    - name: step1
+    - name: greeting
+      image: hello-world
       commands:
           - echo "running"
+          - echo ${PWD}
+          - echo ${DRONE_WORKSPACE}
 
     - name: step2
       commands:
           - echo "running2"
-
-    - name: build
-      commands:
-          - node -v
-          - echo ${PWD}
-          - echo ${DRONE_WORKSPACE}
-
-      
+    

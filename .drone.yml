@@ -17,6 +17,7 @@ steps:
           # - which npm
           # - which pnpm
           # - which node123
+          - ls -al ~
           - echo "running"
           - echo ${ssh_host}
           - echo ${ssh_password}

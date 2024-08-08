@@ -17,7 +17,7 @@ steps:
           # - which npm
           # - which pnpm
           # - which node123
-          - pnpm i
+          - npm i -g pnpm
           - pnpm run build
           # - ls -al ~
           # - echo "running"

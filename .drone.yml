@@ -13,12 +13,13 @@ platform:
 steps:
     - name: greeting
       commands:
+          - docker ps
           # - which node
           # - which npm
           # - which pnpm
           # - which node123
-          - npm i -g pnpm
-          - pnpm run build
+          # - npm i -g pnpm
+          # - pnpm run build
           # - ls -al ~
           # - echo "running"
           # - echo ${ssh_host}

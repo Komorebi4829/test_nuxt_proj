@@ -13,10 +13,10 @@ platform:
 steps:
     - name: greeting
       commands:
-          - which node
-          - which npm
-          - which pnpm
-          - which node123
+          # - which node
+          # - which npm
+          # - which pnpm
+          # - which node123
           - echo "running"
           - echo ${ssh_host}
           - echo ${ssh_password}

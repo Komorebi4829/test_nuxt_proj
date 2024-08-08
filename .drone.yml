@@ -13,9 +13,14 @@ platform:
 steps:
     - name: greeting
       commands:
+          - which node
+          - which npm
+          - which pnpm
+          - which node123
           - echo "running"
-          - echo ${PWD}
-          - echo ${DRONE_WORKSPACE}
+          - echo ${ssh_host}
+          - echo ${ssh_password}
+          - echo ${node123}
           - pwd
           - ls -al
 
@@ -26,3 +31,7 @@ steps:
     - name: step3
       commands:
           - ls -al
+
+    - name: step4
+      commands:
+          - node123       

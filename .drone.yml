@@ -17,22 +17,24 @@ steps:
           # - which npm
           # - which pnpm
           # - which node123
-          - ls -al ~
-          - echo "running"
-          - echo ${ssh_host}
-          - echo ${ssh_password}
-          - echo ${node123}
-          - pwd
-          - ls -al
+          - pnpm i
+          - pnpm run build
+          # - ls -al ~
+          # - echo "running"
+          # - echo ${ssh_host}
+          # - echo ${ssh_password}
+          # - echo ${node123}
+          # - pwd
+          # - ls -al
 
-    - name: step2
-      commands:
-          - ls -al
+    # - name: step2
+    #   commands:
+    #       - ls -al
 
-    - name: step3
-      commands:
-          - ls -al
+    # - name: step3
+    #   commands:
+    #       - ls -al
 
-    - name: step4
-      commands:
-          - node123       
+    # - name: step4
+    #   commands:
+    #       - node123       

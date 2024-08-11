@@ -29,7 +29,6 @@ steps:
           - ls -al
           - node -v
           - npm -v
-          - pnpm -v
           - node install -g pnpm
           - pnpm install
           - pnpm run build

@@ -29,8 +29,9 @@ steps:
           - ls -al
           - node -v
           - npm -v
-          - node i -g pnpm
-          - pnpm i
+          - pnpm -v
+          - node install -g pnpm
+          - pnpm install
           - pnpm run build
           - cp -r .otuput /var/www/test_nuxt_proj/
 

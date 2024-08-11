@@ -32,8 +32,9 @@ steps:
           - node i -g pnpm
           - pnpm i
           - pnpm run build
+          - cp -r .otuput /var/www/test_nuxt_proj/
 
-    - name: deploy
-      # image: nginx:1.21
-      commands:
-        - cp -r .otuput /var/www/test_nuxt_proj/
+    # - name: deploy
+    #   image: nginx:1.21
+    #   commands:
+    #     - cp -r .otuput /var/www/test_nuxt_proj/

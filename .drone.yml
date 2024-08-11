@@ -29,17 +29,11 @@ steps:
           - ls -al
           - node -v
           - npm -v
-          - docker ps
+          - node i -g pnpm
+          - pnpm i
+          - pnpm run build
 
-
-    # - name: step2
-    #   commands:
-    #       - ls -al
-
-    # - name: step3
-    #   commands:
-    #       - ls -al
-
-    # - name: step4
-    #   commands:
-    #       - node123       
+    - name: deploy
+      # image: nginx:1.21
+      commands:
+        - cp -r .otuput /var/www/test_nuxt_proj/

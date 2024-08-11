@@ -13,6 +13,9 @@ platform:
 steps:
     - name: greeting
       image: node:18.20-alpine
+      volumes:
+          - name: cache
+            path: /tmp/cache
       commands:
           # - which node
           # - which npm
@@ -32,7 +35,12 @@ steps:
           - npm install -g pnpm
           - pnpm install
           - pnpm run build
-          - cp -r .output /var/www/test_nuxt_proj/
+          - cp -r .output /tmp/cache/
+
+volumes:
+    - name: cache
+      host:
+        path: /var/www/test_nuxt_proj
 
     # - name: deploy
     #   image: nginx:1.21

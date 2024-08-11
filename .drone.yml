@@ -1,5 +1,5 @@
 kind: pipeline
-type: exec
+type: docker
 name: default
 
 trigger:
@@ -12,8 +12,8 @@ platform:
 
 steps:
     - name: greeting
+      image: node:18.20-alpine
       commands:
-          - docker ps
           # - which node
           # - which npm
           # - which pnpm
@@ -25,8 +25,11 @@ steps:
           # - echo ${ssh_host}
           # - echo ${ssh_password}
           # - echo ${node123}
-          # - pwd
-          # - ls -al
+          - pwd
+          - ls -al
+          - node -v
+          - npm -v
+          - docker ps
 
     # - name: step2
     #   commands:
